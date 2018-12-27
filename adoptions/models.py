@@ -14,5 +14,8 @@ class Pet(models.Model):
 
 class Vaccine(models.Model):
     name=models.CharField(max_length=50)
+    
+    def _str_(self):
+        return self.name
         
         
