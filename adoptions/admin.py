@@ -5,5 +5,6 @@ from .models import Pet
 
 @admin.register(Pet)
 class PetAdmin(admin.ModelAdmin):
-    list_display = ['name','species','breed','age','sext']
+    list_display = ['name','species','breed','age','sex']
+
 
