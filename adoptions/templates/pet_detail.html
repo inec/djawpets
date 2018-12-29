@@ -19,11 +19,15 @@ pet detatils
   <p>v for</p>
   <ul>{% for vaccination in pet.vaccinations.all %} 
 
-        <li></li>
+        <li>{{ vaccination.name }}</li>
         {% endfor %}
   </ul>
 
 
 {% endif %}
-<p class="hidden">{{pet.description}}</p>
+<p>sub :{{pet.submitter }}</p>
+
+<p>sub :{{pet.submission_date | date:"M d Y" }}</p>
+
+<p >{{pet.description}}</p>
 </div>
