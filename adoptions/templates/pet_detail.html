@@ -1,2 +1,29 @@
 pet detatils
+<div>
+        <h3>{{pet.name | capfirst}}</h3>
 <h3>{{pet.name}}</h3>
+
+<p>{{pet.species}}</p>
+
+{% if pet.breed%}
+<p>Breed: {{pet.breed}}</p>
+{% endif %}
+
+<p>{{pet.sex}}</p>
+{% if pet.breed%}
+<p>s: {{pet.sex}}</p>
+{% endif %}
+
+
+{% if pet.vaccinations.all %}
+  <p>v for</p>
+  <ul>{% for vaccination in pet.vaccinations.all %} 
+
+        <li></li>
+        {% endfor %}
+  </ul>
+
+
+{% endif %}
+<p class="hidden">{{pet.description}}</p>
+</div>
